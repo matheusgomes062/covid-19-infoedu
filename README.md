@@ -2,6 +2,11 @@
 
 ## Build Setup
 
+Para rodar o programa na sua máquina é necessário ter o [NodeJs](https://nodejs.org/en/)
+e o [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable).
+
+Você pode saber mais sobre os mesmos clicando nos links disponibilizados.
+
 ```bash
 # install dependencies
 $ yarn install
