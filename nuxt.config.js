@@ -17,16 +17,17 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/mixinSrcSvg.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["@nuxtjs/svg"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/style-resources"],
+  modules: ["@nuxtjs/style-resources", "@nuxtjs/axios"],
+
   styleResources: {
     scss: [
       "assets/scss/setup/_default.scss",
@@ -35,6 +36,11 @@ export default {
       "assets/scss/setup/_reset.scss",
       "assets/scss/setup/_variables.scss"
     ]
+  },
+
+  // Axios Configuration: See https://axios.nuxtjs.org/options
+  axios: {
+    baseURL: "url-back-end"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
