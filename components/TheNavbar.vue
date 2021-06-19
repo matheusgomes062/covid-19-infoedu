@@ -10,7 +10,7 @@
       class="openBtn"
     ></div>
     <div v-else class="sideNavbar">
-      <h2>Soluçoes e dicas para...</h2>
+      <h2>Soluções e dicas para...</h2>
       <div
         v-html="srcSvg('chevron-right')"
         @click="openNav"
