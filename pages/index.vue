@@ -15,6 +15,7 @@
       <div class="imageContainer"></div>
     </div>
     <CardsContainer />
+    <HowToProtectYourself />
   </div>
 </template>
 
