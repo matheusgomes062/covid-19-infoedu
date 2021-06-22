@@ -1,6 +1,6 @@
 <template>
   <header class="headerContainer">
-    <h1>COVID-19</h1>
+    <h1 @click="$router.push('/')" style="cursor: pointer">COVID-19</h1>
 
     <div
       v-if="!isNavOpen"
@@ -18,10 +18,18 @@
         class="closeBtn"
       ></div>
       <div class="linksContainer">
-        <a class="link">Alimentação durante a pandemia</a>
-        <a class="link">Saúde durante a pandemia nos esportes</a>
-        <a class="link">Finanças pessoais durante a pandemia</a>
-        <a class="link">Finanças para empresas durante a pandemia</a>
+        <NuxtLink to="/healthyEating" class="link"
+          >Alimentação durante a pandemia</NuxtLink
+        >
+        <NuxtLink to="/healthInSports" class="link"
+          >Saúde durante a pandemia nos esportes</NuxtLink
+        >
+        <NuxtLink to="/personalFinances" class="link"
+          >Finanças pessoais durante a pandemia</NuxtLink
+        >
+        <NuxtLink to="/companyFinances" class="link"
+          >Finanças para empresas durante a pandemia</NuxtLink
+        >
       </div>
     </div>
   </header>

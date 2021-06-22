@@ -21,7 +21,7 @@
 import CardsContainer from "~/components/CardsContainer";
 
 export default {
-  name: "index",
+  name: "healthyEating",
   data() {
     return {};
   },
