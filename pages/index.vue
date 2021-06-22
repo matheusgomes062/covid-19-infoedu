@@ -16,6 +16,7 @@
     </div>
     <CardsContainer />
     <HowToProtectYourself />
+    <Symptoms />
   </div>
 </template>
 
@@ -31,12 +32,14 @@ export default {
     return {};
   },
   components: {
-    CardsContainer
+    CardsContainer,
+    HowToProtectYourself,
+    Symptoms
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .titleAndPictureContainer {
   display: flex;
   flex-direction: row;

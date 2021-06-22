@@ -63,7 +63,7 @@ export default {
   background-color: $default-gray;
   overflow-x: hidden;
   padding-top: 100px;
-  transition: 0.5s;
+  transition: width 0.5s;
   white-space: nowrap;
 
   h2 {
