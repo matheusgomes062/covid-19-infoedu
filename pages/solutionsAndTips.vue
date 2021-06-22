@@ -14,18 +14,11 @@
       </div>
       <div class="imageContainer"></div>
     </div>
-    <CardsContainer />
-    <HowToProtectYourself />
-    <Symptoms />
-    <Form />
   </div>
 </template>
 
 <script>
 import CardsContainer from "~/components/CardsContainer";
-import HowToProtectYourself from "~/components/HowToProtectYourself";
-import Symptoms from "~/components/Symptoms";
-import Form from "~/components/Form";
 
 export default {
   name: "index",
@@ -33,10 +26,7 @@ export default {
     return {};
   },
   components: {
-    CardsContainer,
-    HowToProtectYourself,
-    Symptoms,
-    Form
+    CardsContainer
   }
 };
 </script>

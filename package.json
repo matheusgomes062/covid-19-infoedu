@@ -13,7 +13,9 @@
     "@nuxtjs/svg": "^0.1.12",
     "axios": "^0.21.1",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "vue-the-mask": "^0.11.1",
+    "vuelidate": "^0.7.6"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.1.0",

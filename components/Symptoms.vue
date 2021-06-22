@@ -1,6 +1,6 @@
 <template>
   <div class="sectionContainer">
-    <h1 class="title">Sintomas</h1>
+    <h1 class="symptomsTitle">Sintomas</h1>
     <div class="symptomsCircleContainer">
       <div class="symptonsContainer">
         <div class="symptonsColumn">
@@ -35,26 +35,24 @@
 export default {
   name: "Symptoms",
   data() {
-    return {
-    };
+    return {};
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .sectionContainer {
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
-.title {
+.symptomsTitle {
   font-size: 4em;
   font-weight: 900;
-  display: block;
-  text-align: end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .symptomsCircleContainer {
@@ -67,7 +65,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     width: 500px;
-    
+
     .symptonsColumn {
       display: flex;
       flex-direction: column;

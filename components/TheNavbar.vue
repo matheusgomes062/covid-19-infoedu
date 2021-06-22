@@ -9,7 +9,7 @@
       id="menu-icon"
       class="openBtn"
     ></div>
-    <div v-else class="sideNavbar">
+    <div :class="[isNavOpen ? 'sideNavbar' : 'noSideNavbar']">
       <h2>Soluções e dicas para...</h2>
       <div
         v-html="srcSvg('chevron-right')"
@@ -81,6 +81,22 @@ export default {
       cursor: pointer;
     }
   }
+}
+
+.noSideNavbar {
+  width: 0px;
+  width: 0px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: $default-gray;
+  overflow-x: hidden;
+  padding-top: 100px;
+  transition: width 0.5s;
+  white-space: nowrap;
+  display: show;
 }
 
 .linksContainer {
