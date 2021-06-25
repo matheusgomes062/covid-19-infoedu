@@ -1,22 +1,39 @@
 <template>
-  <swiper class="swiper" :options="swiperOption">
-    <swiper-slide>
-      <div v-for="(tip, index) in tips" :key="index">
-        {{ tip.title }}
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div v-for="(tip, index) in tips" :key="index">{{ tip.title }}</div>
-    </swiper-slide>
-    <swiper-slide>
-      <div v-for="(tip, index) in tips" :key="index">
-        {{ tip.title }}
-      </div></swiper-slide
-    >
-    <div class="swiper-pagination" slot="pagination"></div>
-    <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+  <div>
+    <h3 style="text-align: center">Arraste para os lados para ver as dicas!</h3>
+    <swiper class="swiper" :options="swiperOption">
+      <swiper-slide>
+        <div
+          v-for="(tip, index) in tips[0]"
+          :key="index"
+          @click="redirectToNews(tip.link)"
+        >
+          {{ tip.title }}
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          v-for="(tip, index) in tips[1]"
+          :key="index"
+          @click="redirectToNews(tip.link)"
+        >
+          {{ tip.title }}
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          v-for="(tip, index) in tips[2]"
+          :key="index"
+          @click="redirectToNews(tip.link)"
+        >
+          {{ tip.title }}
+        </div></swiper-slide
+      >
+      <div class="swiper-pagination" slot="pagination"></div>
+      <!-- <div class="swiper-button-prev" slot="button-prev"></div>
     <div class="swiper-button-next" slot="button-next"></div> -->
-  </swiper>
+    </swiper>
+  </div>
 </template>
 
 <script>
@@ -50,6 +67,11 @@ export default {
   },
   props: {
     tips: Array
+  },
+  methods: {
+    redirectToNews(link) {
+      window.location = link;
+    }
   }
 };
 </script>
@@ -66,6 +88,7 @@ export default {
     // background-color: $default-gray;
     flex-direction: column;
     div {
+      cursor: pointer;
       padding: 20px;
       margin: 10px 0;
       border-radius: 10px;
