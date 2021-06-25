@@ -1,71 +1,37 @@
 <template>
   <div>
-    <div class="titleAndPictureContainer">
-      <div class="titleAndInfoContainer">
-        <div class="titleContainer">
-          <h2>188+ Países afetados pelo</h2>
-          <h1>CORONAVÍRUS</h1>
-        </div>
-        <section>
-          O vírus foi inicialmente reportado em Wuhan, Hubel China em 17 de
-          Novembro de 2019, e em 11 de Março de 2020 a Organização Mundial da
-          Saúde (OMS) declarou o coronavírus como uma pandemia.
-        </section>
-      </div>
-      <div class="imageContainer"></div>
-    </div>
+    <Tips :title="title" :info="info" :tips="tips"></Tips>
   </div>
 </template>
 
 <script>
-import CardsContainer from "~/components/CardsContainer";
+import Tips from "../components/Tips.vue";
 
 export default {
-  name: "healthInSports",
+  name: "healthySports",
   data() {
-    return {};
+    return {
+      title: "Soluções e dicas para saúde nos esportes durante a pandemia",
+      info:
+        "Durante a pandemia do novo coronavírus, diante das medidas de distanciamento social, a maioria dos praticantes de atividade física passou a realizar seus treinamentos dentro de casa, adaptando também essa parte da vida aos novos tempos. ",
+      tips: [
+        {
+          title: "teste 1"
+        },
+        {
+          title: "teste 2"
+        },
+        {
+          title: "teste 3"
+        }
+      ]
+    };
   },
+  props: {},
   components: {
-    CardsContainer
+    Tips
   }
 };
 </script>
 
-<style lang="scss" scoped>
-.titleAndPictureContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 40px 0;
-}
-
-.titleAndInfoContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 250px;
-  margin-top: 40px;
-
-  h1 {
-    font-size: 4em;
-    font-weight: 900;
-  }
-
-  h2,
-  h1 {
-    margin: 10px 0;
-  }
-}
-
-section {
-  width: 450px;
-  line-height: 1.6em;
-}
-
-.imageContainer {
-  min-width: 500px;
-  min-height: 500px;
-  background-color: $default-gray;
-  border-radius: 999999999px;
-}
-</style>
+<style lang="scss" scoped></style>

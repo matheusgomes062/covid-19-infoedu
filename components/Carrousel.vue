@@ -1,0 +1,82 @@
+<template>
+  <swiper class="swiper" :options="swiperOption">
+    <swiper-slide>
+      <div v-for="(tip, index) in tips" :key="index">
+        {{ tip.title }}
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div v-for="(tip, index) in tips" :key="index">{{ tip.title }}</div>
+    </swiper-slide>
+    <swiper-slide>
+      <div v-for="(tip, index) in tips" :key="index">
+        {{ tip.title }}
+      </div></swiper-slide
+    >
+    <div class="swiper-pagination" slot="pagination"></div>
+    <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div> -->
+  </swiper>
+</template>
+
+<script>
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+
+export default {
+  name: "swiper-mousewheel-control",
+  title: "Mousewheel control",
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  data() {
+    return {
+      swiperOption: {
+        direction: "horizontal",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        loop: true
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev"
+        // }
+      }
+    };
+  },
+  props: {
+    tips: Array
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.swiper {
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em * 2;
+    // background-color: $default-gray;
+    flex-direction: column;
+    div {
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      align-items: center;
+      background-color: $default-gray;
+      width: 100%;
+    }
+  }
+}
+.swiper-container {
+  height: 300px;
+  width: 500px;
+}
+</style>

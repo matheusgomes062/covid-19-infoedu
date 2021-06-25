@@ -22,7 +22,7 @@
           >Alimentação durante a pandemia</NuxtLink
         >
         <NuxtLink to="/healthInSports" class="link"
-          >Saúde durante a pandemia nos esportes</NuxtLink
+          >Saúde nos esportes durante a pandemia</NuxtLink
         >
         <NuxtLink to="/personalFinances" class="link"
           >Finanças pessoais durante a pandemia</NuxtLink
@@ -65,7 +65,7 @@ export default {
   width: 600px;
   height: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
   background-color: $default-gray;
