@@ -12,7 +12,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 html {
   font-family: "Avenir", Arial, sans-serif;
   font-size: 16px;
@@ -22,6 +22,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background-color: $base-dark-2;
+}
+
+body {
+  color: $pastel-gray;
 }
 
 *,

@@ -5,28 +5,28 @@
       <div class="symptonsContainer">
         <div class="symptonsColumn">
           <div class="symptom">
-            Dor de cabeça
+            Febre
           </div>
           <div class="symptom">
             Dor de cabeça
           </div>
           <div class="symptom">
-            Dor de cabeça
+            Tosse seca
           </div>
         </div>
         <div class="symptonsColumn">
           <div class="symptom">
-            Dor de cabeça
+            Garganta seca
           </div>
           <div class="symptom">
-            Dor de cabeça
+            Fadiga
           </div>
           <div class="symptom">
-            Dor de cabeça
+            Perda de paladar
           </div>
         </div>
       </div>
-      <div class="circle"></div>
+      <img src="~/assets/pictures/fever.jpeg" alt="fever" class="circle" />
     </div>
   </div>
 </template>
@@ -74,11 +74,13 @@ export default {
       div {
         width: 200px;
         padding: 20px;
-        background-color: $default-gray;
+        background-color: $light-dark;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 0px 5px 15px $base-dark;
       }
     }
   }
@@ -89,5 +91,6 @@ export default {
   height: 500px;
   background-color: $default-gray;
   border-radius: 999999px;
+  box-shadow: 0px 0px 25px $base-dark;
 }
 </style>

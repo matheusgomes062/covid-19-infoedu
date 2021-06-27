@@ -4,19 +4,31 @@
     <div class="circlesContainer">
       <div class="circleTitleContainer">
         <h3>Lave as mãos</h3>
-        <div class="circle"></div>
+        <img
+          src="~/assets/pictures/wash-your-hands.png"
+          alt="mask"
+          class="circle"
+        />
       </div>
       <div class="circleTitleContainer">
         <h3>Matenha Distância</h3>
-        <div class="circle"></div>
+        <img
+          src="~/assets/pictures/social-distancing.png"
+          alt="mask"
+          class="circle"
+        />
       </div>
       <div class="circleTitleContainer">
         <h3>Use Máscara</h3>
-        <div class="circle"></div>
+        <img src="~/assets/pictures/mask.png" alt="mask" class="circle" />
       </div>
       <div class="circleTitleContainer">
         <h3>Use álcool em gel</h3>
-        <div class="circle"></div>
+        <img
+          src="~/assets/pictures/disinfectant.png"
+          alt="mask"
+          class="circle"
+        />
       </div>
     </div>
   </div>
@@ -61,7 +73,7 @@ h1 {
   .circle {
     width: 200px;
     height: 200px;
-    background-color: $default-gray;
+    padding: 30px;
     border-radius: 99999px;
   }
 }

@@ -12,7 +12,11 @@
           Saúde (OMS) declarou o coronavírus como uma pandemia.
         </section>
       </div>
-      <div class="imageContainer"></div>
+      <img
+        src="~/assets/pictures/covid19-circle.jpeg"
+        alt="covid19-circle"
+        class="imageContainer"
+      />
     </div>
     <CardsContainer />
     <HowToProtectYourself />
@@ -73,9 +77,10 @@ section {
 }
 
 .imageContainer {
-  min-width: 500px;
-  min-height: 500px;
+  width: 500px;
+  height: 500px;
   background-color: $default-gray;
   border-radius: 999999999px;
+  box-shadow: 0px 0px 25px $base-dark;
 }
 </style>

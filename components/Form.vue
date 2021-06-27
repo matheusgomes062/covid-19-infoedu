@@ -91,29 +91,23 @@ export default {
     updateAsyncState(state) {
       this.asyncState = state;
     },
-    submitRegister() {
+    async submitRegister() {
       this.asyncState = "pending";
       //test
-      this.asyncState = "success";
+      // this.asyncState = "success";
       this.currentStepNumber++;
-      this.$vToastify.success("Paciente registrado!");
-      //   api
-      //     .post("/Patients", this.form)
-      //     .then(response => {
-      //       if (response.status == 200) {
-      //         console.log(response);
-      //         console.log("Patient form submited");
-      //         this.asyncState = "success";
-      //         this.currentStepNumber++;
-      //         this.$vToastify.success("Paciente registrado!");
-      //       } else {
-      //         this.$vToastify.error("Não foi possível registrar...");
-      //       }
-      //     })
-      //     .catch(error => {
-      //       console.log(error.response);
-      //       this.$vToastify.error("Não foi possível registrar...");
-      //     });
+      // this.$vToastify.success("Participante registrado!");
+      await this.$axios
+        .$post("/participants", {
+          ...this.form
+        })
+        .then(function(response) {
+          this.asyncState = "success";
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     },
     nextButtonAction() {
       this.$refs.currentStep
@@ -158,7 +152,7 @@ export default {
   height: 600px;
   padding: 25px;
   background-color: white;
-  box-shadow: 0px 5px 15px $default-gray;
+  box-shadow: 0px 0px 25px $base-dark;
   border-radius: 10px;
   margin: auto;
   outline-style: none;
@@ -169,6 +163,10 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: black;
+  div {
+    max-width: 100%;
+  }
 }
 
 .progress-bar {

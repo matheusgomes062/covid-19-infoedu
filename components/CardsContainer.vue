@@ -1,6 +1,11 @@
 <template>
   <div class="cardsContainer">
-    <div class="card" v-for="(card, index) in cards" :key="index">
+    <div
+      @click="goToApi"
+      class="card"
+      v-for="(card, index) in cards"
+      :key="index"
+    >
       <p>{{ card.number }} +</p>
       <p>{{ card.title }}</p>
     </div>
@@ -12,26 +17,42 @@ export default {
   name: "cardsContainer",
   data() {
     return {
-      cards: [
-        {
-          number: 9999,
-          title: "Total de mortes"
-        },
-        {
-          number: 9999,
-          title: "Total de mortes"
-        },
-        {
-          number: 9999,
-          title: "Total de mortes"
-        },
-
-        {
-          number: 9999,
-          title: "Total de mortes"
-        }
-      ]
+      cards: [],
+      covidInfo: null
     };
+  },
+  mounted() {
+    this.fetchCardsInfo();
+  },
+  methods: {
+    async fetchCardsInfo() {
+      this.covidInfo = await this.$api.$get("/summary").catch(function(error) {
+        console.log(error);
+      });
+      this.covidInfo = this.covidInfo.Global;
+      console.log(this.covidInfo);
+      this.cards.push(
+        {
+          number: this.covidInfo.NewDeaths,
+          title: "Total de novas mortes"
+        },
+        {
+          number: this.covidInfo.NewRecovered,
+          title: "Total de novos ecuperados"
+        },
+        {
+          number: this.covidInfo.TotalConfirmed,
+          title: "Total de casos confirmados"
+        },
+        {
+          number: this.covidInfo.TotalRecovered,
+          title: "Total de recuperados"
+        }
+      );
+    },
+    goToApi() {
+      window.location = "https://covid19api.com/";
+    }
   }
 };
 </script>
@@ -52,7 +73,9 @@ export default {
   padding: 10px;
   cursor: pointer;
   justify-content: center;
-  background-color: $default-gray;
+  background-color: $light-dark;
+  border: 2px solid $pastel-gray;
+  box-shadow: 0px 0px 15px $light-dark;
   border-radius: 10px;
   p {
     text-align: center;

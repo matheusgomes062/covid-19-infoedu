@@ -1,9 +1,10 @@
 <template>
   <div class="content">
-    <h1 class="title">Registrar Paciente</h1>
+    <h1 class="title">Registrar Participante</h1>
 
     <h3 class="subtitle">
-      Registre as informações pessoais do paciente
+      Preencha com suas informações para entrarmos em contato para uma pesquisa
+      sobre covid!
     </h3>
 
     <form class="form">
@@ -160,6 +161,7 @@ export default {
 
 .subtitle {
   margin: 10px 0;
+  text-align: center;
 }
 
 .form {

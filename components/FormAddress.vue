@@ -1,9 +1,10 @@
 <template>
   <div class="content">
-    <h1 class="title">Registrar Paciente</h1>
+    <h1 class="title">Registrar Participante</h1>
 
     <h3 class="subtitle">
-      Registre as informações de endereço do paciente
+      Preencha as informações de localização para entrarmos em contato para uma
+      pesquisa sobre covid!
     </h3>
 
     <form class="form">
@@ -137,4 +138,42 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 10px 0;
+}
+
+.subtitle {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+}
+
+.form-group {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  label {
+    margin-bottom: 5px;
+  }
+  .radioOptionContainer {
+    display: flex;
+    align-items: center;
+    label {
+      margin: 0 5px !important;
+    }
+  }
+}
+</style>

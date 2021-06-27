@@ -21,7 +21,8 @@ export default {
     "~/plugins/mixinSrcSvg.js",
     { src: "~/plugins/vuelidate" },
     "~plugins/vue-the-mask.js",
-    "~plugins/vue-awesome-swiper.js"
+    "~plugins/vue-awesome-swiper.js",
+    "~/plugins/api"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -45,7 +46,7 @@ export default {
 
   // Axios Configuration: See https://axios.nuxtjs.org/options
   axios: {
-    baseURL: "url-back-end"
+    baseURL: "http://localhost:8080/api"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

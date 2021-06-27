@@ -68,7 +68,7 @@ export default {
   z-index: 2;
   top: 0;
   right: 0;
-  background-color: $default-gray;
+  background-color: $pastel-gray;
   overflow-x: hidden;
   padding-top: 100px;
   transition: width 0.5s;
@@ -76,16 +76,17 @@ export default {
 
   h2 {
     padding: 8px 8px 8px 32px;
+    color: $base-dark;
   }
   a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 1.3em;
-    color: #818181;
+    color: $base-dark;
     display: block;
     transition: 0.3s;
     &:hover {
-      color: #f1f1f1;
+      color: $light-dark;
       cursor: pointer;
     }
   }
@@ -99,7 +100,7 @@ export default {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: $default-gray;
+  background-color: $base-dark;
   overflow-x: hidden;
   padding-top: 100px;
   transition: width 0.5s;
@@ -130,9 +131,14 @@ export default {
   /* font-size: 20px; */
   cursor: pointer;
   /* background-color: #111; */
-  /* color: black;
-  padding: 10px 15px;
+  // background-color: $base-dark;
+  color: $base-dark;
+  /* padding: 10px 15px;
   border: none; */
+}
+
+.openBtn {
+  color: $pastel-gray;
 }
 
 .openBtn:hover {

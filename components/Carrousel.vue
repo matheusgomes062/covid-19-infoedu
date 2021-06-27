@@ -93,7 +93,8 @@ export default {
       margin: 10px 0;
       border-radius: 10px;
       align-items: center;
-      background-color: $default-gray;
+      background-color: $light-dark;
+      // color: black;
       width: 100%;
     }
   }
