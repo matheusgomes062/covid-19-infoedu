@@ -29,7 +29,7 @@ export default {
         ],
         [
           {
-            title: "Defina objetivos adequados",
+            title: "Defina objetivos",
             link:
               "https://www.uol.com.br/vivabem/colunas/paola-machado/2021/06/11/5-dicas-para-o-retorno-as-atividades-esportivas.htm"
           },

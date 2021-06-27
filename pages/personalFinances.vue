@@ -24,7 +24,7 @@ export default {
           {
             title: "Na crise, corte despesas!",
             link:
-              "https://www.em.com.br/app/noticia/bem-viver/2020/09/02/interna_bem_viver,1181701/que-esportes-oferecem-maior-ou-menor-risco-de-contagio-na-pandemia.shtml"
+              "https://www.serasa.com.br/ensina/suas-economias/coronavirus-10-dicas/"
           },
           {
             title: "Renegocie gastos essenciais",
