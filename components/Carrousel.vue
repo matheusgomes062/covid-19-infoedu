@@ -107,8 +107,8 @@ export default {
 .swiper-container {
   height: 300px;
   width: 500px;
-  @include d(s) {
-    width: 100%;
-  }
+  // @include d(s) {
+  //   width: 100%;
+  // }
 }
 </style>
