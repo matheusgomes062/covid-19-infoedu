@@ -7,20 +7,27 @@ e o [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable).
 
 Você pode saber mais sobre os mesmos clicando nos links disponibilizados.
 
+
+Os comandos abaixo permitem rodar o projeto do front-end
 ```bash
-# install dependencies
+# instalar as dependencias
 $ yarn install
 
-# serve with hot reload at localhost:3000
+# server com hot reload na rota localhost:3000
 $ yarn dev
 
-# build for production and launch server
+# build para deploy
 $ yarn build
 $ yarn start
 
 # generate static project
 $ yarn generate
 ```
+
+Para rodar o back-end será necessário possuir o [PostgreSQL](https://www.postgresql.org/) instalado, então criar uma tabela chamada testedb.
+Após, basta abrir o projeto [back-end](https://github.com/matheusgomes062/simple-form-api) e rodar o seguinte comando ```node server.js```. A partir daí o formulário irá popular a tabela testedb no postgres, e vc conseguirá visualizar ao vivo.
+
+
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
