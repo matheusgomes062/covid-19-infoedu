@@ -46,7 +46,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @include d(s) {
+  @include d(sm) {
     height: fit-content;
   }
 }
@@ -54,7 +54,7 @@ export default {
 h1 {
   font-size: 4em;
   font-weight: 900;
-  @include d(s) {
+  @include d(sm) {
     text-align: center;
   }
 }
@@ -64,6 +64,11 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   height: 500px;
+  @include d(m) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+  }
   @include d(s) {
     flex-direction: column;
     align-items: center;
@@ -79,12 +84,16 @@ h1 {
   text-align: center;
   display: flex;
   flex-direction: column;
-  @include d(s) {
+  @include d(sm) {
     margin: 40px 0;
     align-items: center;
   }
   h3 {
     margin: 10px 0;
+    @include d(m) {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
     @include d(s) {
       font-size: 2em;
       font-weight: 600;
@@ -96,6 +105,10 @@ h1 {
     padding: 30px;
     border-radius: 99999px;
     background-color: $light-dark;
+    @include d(m) {
+      width: 300px;
+      height: 300px;
+    }
     @include d(s) {
       width: 350px;
       height: 350px;

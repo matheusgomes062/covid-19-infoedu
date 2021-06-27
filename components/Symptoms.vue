@@ -46,6 +46,9 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include d(m) {
+    height: fit-content;
+  }
   @include d(s) {
     height: 450px;
   }
@@ -56,7 +59,7 @@ export default {
   font-weight: 900;
   display: flex;
   justify-content: flex-end;
-  @include d(s) {
+  @include d(sm) {
     justify-content: center;
   }
 }
@@ -71,7 +74,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     width: 500px;
-    @include d(s) {
+    @include d(sm) {
       justify-content: space-around;
       width: 100%;
     }
@@ -80,7 +83,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      @include d(s) {
+      @include d(sm) {
         height: 300px;
       }
 
@@ -94,6 +97,11 @@ export default {
         border-radius: 10px;
         font-weight: 500;
         box-shadow: 0px 5px 15px $base-dark;
+        @include d(m) {
+          width: 300px;
+          font-size: 1.4em;
+          font-weight: 700px;
+        }
       }
     }
   }
@@ -105,8 +113,7 @@ export default {
   background-color: $default-gray;
   border-radius: 999999px;
   box-shadow: 0px 0px 25px $base-dark;
-
-  @include d(s) {
+  @include d(sm) {
     display: none;
   }
 }

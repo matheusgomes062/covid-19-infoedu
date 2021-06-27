@@ -80,6 +80,11 @@ export default {
   border: 2px solid $pastel-gray;
   box-shadow: 0px 0px 15px $light-dark;
   border-radius: 10px;
+  @include d(m) {
+    width: 180px;
+    height: fit-content;
+    margin: 10px 0;
+  }
   @include d(s) {
     width: 100%;
     margin: 10px 0;
@@ -89,7 +94,7 @@ export default {
     font-weight: 700;
     margin: 5px;
     font-size: 1.5em;
-    @include d(s) {
+    @include d(sm) {
       font-size: 1.2em;
     }
   }

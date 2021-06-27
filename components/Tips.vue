@@ -39,7 +39,10 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   padding: 40px 0;
-  @include d(s) {
+  @include d(sm) {
+    align-items: center;
+  }
+  @include d(sm) {
     flex-direction: column;
   }
 }
@@ -50,7 +53,7 @@ export default {
   justify-content: space-between;
   height: 400px;
   padding-top: 40px;
-  @include d(s) {
+  @include d(sm) {
     height: fit-content;
   }
 

@@ -63,6 +63,9 @@ export default {
   h1 {
     font-size: 4em;
     font-weight: 900;
+    @include d(m) {
+      font-size: 3em;
+    }
   }
 
   h2,
@@ -82,6 +85,11 @@ section {
   background-color: $default-gray;
   border-radius: 999999999px;
   box-shadow: 0px 0px 25px $base-dark;
+
+  @include d(m) {
+    width: 300px;
+    height: 300px;
+  }
   @include d(s) {
     display: none;
   }
