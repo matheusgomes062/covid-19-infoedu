@@ -39,6 +39,9 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   padding: 40px 0;
+  @include d(s) {
+    flex-direction: column;
+  }
 }
 
 .titleAndInfoContainer {
@@ -47,6 +50,9 @@ export default {
   justify-content: space-between;
   height: 400px;
   padding-top: 40px;
+  @include d(s) {
+    height: fit-content;
+  }
 
   h1 {
     font-size: 4em;

@@ -9,11 +9,11 @@
 
     <form class="form">
       <div class="form-group">
-        <label class="form-label" for="address">Endereço do paciente</label>
+        <label class="form-label" for="address">Endereço do participante</label>
         <input
           v-model="$v.form.address.$model"
           type="text"
-          placeholder="Qual o endereço do paciente?"
+          placeholder="Qual o endereço do participante?"
           class="form-control"
           id="address"
         />
@@ -25,11 +25,11 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="form-label" for="district">Bairro do paciente</label>
+        <label class="form-label" for="district">Bairro do participante</label>
         <input
           v-model="$v.form.district.$model"
           type="text"
-          placeholder="Qual o bairro do paciente?"
+          placeholder="Qual o bairro do participante?"
           class="form-control"
           id="district"
         />

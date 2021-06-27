@@ -46,11 +46,17 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include d(s) {
+    height: fit-content;
+  }
 }
 
 h1 {
   font-size: 4em;
   font-weight: 900;
+  @include d(s) {
+    text-align: center;
+  }
 }
 
 .circlesContainer {
@@ -58,6 +64,12 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   height: 500px;
+  @include d(s) {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
+
   :nth-child(even) {
     justify-content: flex-end;
   }
@@ -67,14 +79,27 @@ h1 {
   text-align: center;
   display: flex;
   flex-direction: column;
+  @include d(s) {
+    margin: 40px 0;
+    align-items: center;
+  }
   h3 {
     margin: 10px 0;
+    @include d(s) {
+      font-size: 2em;
+      font-weight: 600;
+    }
   }
   .circle {
     width: 200px;
     height: 200px;
     padding: 30px;
     border-radius: 99999px;
+    background-color: $light-dark;
+    @include d(s) {
+      width: 350px;
+      height: 350px;
+    }
   }
 }
 </style>

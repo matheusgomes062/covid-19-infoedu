@@ -35,7 +35,7 @@
       <div v-else class="thankYouContainer">
         <h1 class="title">Obrigado!</h1>
         <h2 class="subtitle">
-          Paciente registrado!
+          Participante registrado!
         </h2>
         <div>😎🎉</div>
       </div>
@@ -164,6 +164,10 @@ export default {
   align-items: center;
   justify-content: center;
   color: black;
+
+  @include d(s) {
+    width: 100%;
+  }
   div {
     max-width: 100%;
   }

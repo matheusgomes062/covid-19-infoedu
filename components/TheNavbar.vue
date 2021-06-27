@@ -73,6 +73,10 @@ export default {
   padding-top: 100px;
   transition: width 0.5s;
   white-space: nowrap;
+  @include d(s) {
+    width: 100%;
+    white-space: initial;
+  }
 
   h2 {
     padding: 8px 8px 8px 32px;

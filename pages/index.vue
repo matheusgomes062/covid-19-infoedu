@@ -82,5 +82,8 @@ section {
   background-color: $default-gray;
   border-radius: 999999999px;
   box-shadow: 0px 0px 25px $base-dark;
+  @include d(s) {
+    display: none;
+  }
 }
 </style>

@@ -9,11 +9,11 @@
 
     <form class="form">
       <div class="form-group">
-        <label class="form-label" for="name">Nome do paciente</label>
+        <label class="form-label" for="name">Nome do participante</label>
         <input
           v-model="$v.form.name.$model"
           type="text"
-          placeholder="Qual o nome do paciente?"
+          placeholder="Qual o nome do participante?"
           class="form-control"
           id="name"
         />
@@ -22,11 +22,11 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="form-label" for="cpf">Cpf do paciente</label>
+        <label class="form-label" for="cpf">Cpf do participante</label>
         <the-mask
           v-model="$v.form.cpf.$model"
           type="text"
-          placeholder="Qual o cpf do paciente?"
+          placeholder="Qual o cpf do participante?"
           class="form-control"
           id="cpf"
           :mask="['###.###.###-##']"
@@ -37,7 +37,7 @@
       </div>
       <div class="form-group">
         <label class="form-label" for="comorbidity"
-          >Paciente está no grupo de risco?</label
+          >Participante está no grupo de risco?</label
         >
         <div class="radioOptionContainer">
           <input
@@ -68,7 +68,7 @@
         <input
           type="text"
           v-model="$v.form.email.$model"
-          placeholder="paciente@email.com"
+          placeholder="participante@email.com"
           class="form-control"
           id="email"
         />

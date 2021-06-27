@@ -96,11 +96,19 @@ export default {
       background-color: $light-dark;
       // color: black;
       width: 100%;
+      @include d(s) {
+        width: 100%;
+        padding: 20px;
+        margin: 10px 0;
+      }
     }
   }
 }
 .swiper-container {
   height: 300px;
   width: 500px;
+  @include d(s) {
+    width: 100%;
+  }
 }
 </style>

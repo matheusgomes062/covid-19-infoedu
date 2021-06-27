@@ -40,12 +40,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .sectionContainer {
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include d(s) {
+    height: 450px;
+  }
 }
 
 .symptomsTitle {
@@ -53,6 +56,9 @@ export default {
   font-weight: 900;
   display: flex;
   justify-content: flex-end;
+  @include d(s) {
+    justify-content: center;
+  }
 }
 
 .symptomsCircleContainer {
@@ -65,11 +71,18 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     width: 500px;
+    @include d(s) {
+      justify-content: space-around;
+      width: 100%;
+    }
 
     .symptonsColumn {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      @include d(s) {
+        height: 300px;
+      }
 
       div {
         width: 200px;
@@ -92,5 +105,9 @@ export default {
   background-color: $default-gray;
   border-radius: 999999px;
   box-shadow: 0px 0px 25px $base-dark;
+
+  @include d(s) {
+    display: none;
+  }
 }
 </style>
